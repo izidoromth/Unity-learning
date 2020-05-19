@@ -30,8 +30,9 @@ public class PlayerMovement : MonoBehaviour
 
     public void Reset()
     {
-        rb.position = new Vector3(0, 1, 0);
+        transform.position = new Vector3(0, 1, 0);
         transform.eulerAngles = new Vector3(0, 0, 0);
+        rb.velocity = new Vector3(0, 0, 0);
         rb.AddForce(0, 0, 20, ForceMode.VelocityChange);
     }
 
@@ -62,14 +63,10 @@ public class PlayerMovement : MonoBehaviour
 
             Debug.Log(rb.velocity);
         }
-        else
+        else if (GameControl.Instance.GameState == GameState.Finished)
         {
-            if (GameControl.Instance.GameState == GameState.Finished)
-            {
-                if (rb.velocity == Vector3.zero || transform.position.y <= -1)
-                    GameControl.Instance.Pause(true);
-            }
-
+            if ((rb.velocity == Vector3.zero || transform.position.y <= -1) && !GameControl.Instance.Paused)
+                GameControl.Instance.Pause(true);
         }
     }
 }

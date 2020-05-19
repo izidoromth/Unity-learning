@@ -38,6 +38,13 @@ namespace Assets.Scripts
             get { return _gameState; }
             set { _gameState = value; }
         }
+
+        private bool _paused;
+        public bool Paused
+        {
+            get { return _paused; }
+            set { _paused = value; }
+        }
         #endregion
 
         #region GameObjects
@@ -49,6 +56,8 @@ namespace Assets.Scripts
         {
             if (paused) Time.timeScale = 0.0f;
             else Time.timeScale = 1.0f;
+
+            Paused = paused;
         }
 
         public void SetGameState(GameState state)

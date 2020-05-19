@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class StartButtonScript : MonoBehaviour
 {
     public PlayerMovement player;
+    public ObstacleBehaviour obstacleHit;
     public GameObject button;
     public Score scoreManager;
     public void Start_Tapped()
@@ -21,9 +22,9 @@ public class StartButtonScript : MonoBehaviour
         {
             player.Reset();
 
-            GameControl.Instance.SetGameState(GameState.Running);
-
             scoreManager.Reset();
+
+            GameControl.Instance.SetGameState(GameState.Running);            
         }
     }
 

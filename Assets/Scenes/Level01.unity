@@ -787,7 +787,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 2044228832}
+  obstacleHit: {fileID: 0}
   button: {fileID: 1675416950}
+  scoreManager: {fileID: 326914186}
 --- !u!4 &358945205 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8055139279195999621, guid: 5e0a75c342c683446893d6dbce3e6e45,
@@ -817,7 +819,6 @@ GameObject:
   - component: {fileID: 394826697}
   - component: {fileID: 394826699}
   - component: {fileID: 394826698}
-  - component: {fileID: 394826700}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -885,18 +886,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 394826696}
   m_CullTransparentMesh: 0
---- !u!114 &394826700
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 394826696}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c88d84054b59998429af9d85e7ad163b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &435883325 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8055139279195999621, guid: 5e0a75c342c683446893d6dbce3e6e45,
@@ -4153,8 +4142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4dc05ca27c7a0f745867139498e0cfaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movement: {fileID: 2044228832}
-  rb: {fileID: 2044228831}
+  obstacleHit: {fileID: 0}
 --- !u!4 &2061538760 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8055139279195999621, guid: 5e0a75c342c683446893d6dbce3e6e45,

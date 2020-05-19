@@ -13,9 +13,11 @@ public class Score : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        score.text = player.position.z.ToString("0");
-
-        if (GameControl.Instance.GameState == GameState.Finished)
+        if(GameControl.Instance.GameState == GameState.Running)
+        {
+            score.text = player.position.z.ToString("0");
+        }
+        else if (GameControl.Instance.GameState == GameState.Finished)
         {
             score.transform.position = new Vector3(score.transform.position.x, 270, score.transform.position.z);
             score.transform.localScale = new Vector3(0.6f, 0.6f, 0);
