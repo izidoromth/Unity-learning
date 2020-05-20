@@ -21,6 +21,7 @@ public class ObstacleBehaviour : MonoBehaviour
     {
         transform.position = initPos;
         transform.eulerAngles = initRot;
+        rb.velocity = Vector3.zero;
 
         Reseting = false;
     }
